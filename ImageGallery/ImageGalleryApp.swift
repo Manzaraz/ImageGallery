@@ -18,7 +18,7 @@ struct ImageGalleryApp: App {
                 
             }
             .environmentObject(dataModel)
-//            .navigationViewStyle(.stack) // Originaly this is the modifier, but now is depreated,
+//            .navigationViewStyle(.stack) // Originaly this is the modifier, but now is depreated, you must use navigationSplitViewStyle instead
             .navigationSplitViewStyle(.prominentDetail) // modifiers .balanced, .automatic and prominentDetail
         }
     }
