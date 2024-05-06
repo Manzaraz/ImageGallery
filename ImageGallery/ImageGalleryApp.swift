@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct ImageGalleryApp: App {
+    @StateObject var dataModel = DataModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                GridView()
+                
+            }
+            .environmentObject(dataModel)
+//            .navigationViewStyle(.stack) // Originaly this is the modifier, but now is depreated,
+            .navigationSplitViewStyle(.prominentDetail) // modifiers .balanced, .automatic and prominentDetail
         }
     }
 }
